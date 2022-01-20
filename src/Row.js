@@ -3,14 +3,13 @@ import axios from "./axios";
 import axios2 from "./axios2";
 import "./Row.css";
 import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchURL, isLargerow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, settrailerUrl] = useState("");
-  const [VideoURL, setVideoURL] = useState("");
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
@@ -38,7 +37,7 @@ function Row({ title, fetchURL, isLargerow }) {
     playerVars: {
       autoplay: 1,
     },
-  }; 
+  };
 
   const handleClick = (movie) => {
     if (trailerUrl) {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Row from "./Row";
 import requests from "./requests";
