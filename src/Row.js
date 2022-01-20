@@ -38,7 +38,7 @@ function Row({ title, fetchURL, isLargerow }) {
     playerVars: {
       autoplay: 1,
     },
-  };
+  }; 
 
   const handleClick = (movie) => {
     if (trailerUrl) {
